@@ -63,22 +63,26 @@ p {
   display: grid;
   -ms-grid-columns: 1fr 3fr;
       grid-template-columns: 1fr 3fr;
-  -ms-grid-rows: 2fr;
-      grid-template-rows: 2fr;
   gap: var(--grid-gap);
   max-width: 1440px;
+  margin: 16px auto;
 }
 
 .dashboard .sidebar {
   background-color: var(--dark-blue);
   border-radius: 0 0 var(--border-radius) var(--border-radius);
   overflow: hidden;
+  height: 456px;
 }
 
 .dashboard .sidebar .title {
   background-color: var(--blue);
   padding: var(--content-padding);
   border-radius: var(--border-radius);
+}
+
+.dashboard .sidebar .title__text {
+  margin-top: 32px;
 }
 
 .dashboard .sidebar .title img {
@@ -89,7 +93,7 @@ p {
 }
 
 .dashboard .sidebar .title p {
-  margin: 32px 0 4px 0;
+  margin-bottom: 4px;
 }
 
 .dashboard .sidebar .filters {
@@ -131,6 +135,7 @@ p {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  height: 216px;
   position: relative;
 }
 
@@ -193,5 +198,92 @@ p {
 .dashboard .cards .card--selfcare {
   background-color: var(--soft-orange);
   background-image: url("../images/icon-self-care.svg");
+}
+
+@media screen and (max-width: 1024px) {
+  .dashboard {
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+  }
+  .dashboard .cards {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 0.5fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard {
+    margin: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .dashboard .sidebar {
+    height: auto;
+  }
+  .dashboard .sidebar .title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .dashboard .sidebar .title__text {
+    margin: 0 0 0 16px;
+  }
+  .dashboard .sidebar .title__text h1 {
+    font-size: 22px;
+  }
+  .dashboard .sidebar .filters {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .dashboard .sidebar .filters a:not(:first-child) {
+    margin-top: 0;
+  }
+  .dashboard .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .dashboard .cards .card {
+    height: 180px;
+  }
+  .dashboard .cards .card__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .dashboard .cards .card__content h1,
+  .dashboard .cards .card__content p {
+    margin-top: 16px;
+  }
 }
 /*# sourceMappingURL=index.css.map */

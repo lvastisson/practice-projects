@@ -65,19 +65,24 @@ p {
 .dashboard {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: 2fr;
   gap: var(--grid-gap);
   max-width: 1440px;
+  margin: 16px auto;
 
   .sidebar {
     background-color: var(--dark-blue);
     border-radius: 0 0 var(--border-radius) var(--border-radius);
     overflow: hidden;
+    height: 456px;
 
     .title {
       background-color: var(--blue);
       padding: var(--content-padding);
       border-radius: var(--border-radius);
+
+      &__text {
+        margin-top: 32px;
+      }
 
       img {
         width: 80px;
@@ -87,7 +92,7 @@ p {
       }
 
       p {
-        margin: 32px 0 4px 0;
+        margin-bottom: 4px;
       }
     }
 
@@ -116,6 +121,7 @@ p {
       display: flex;
       flex-direction: column;
       align-items: stretch;
+      height: 216px;
 
       position: relative;
 
@@ -178,6 +184,73 @@ p {
       &--selfcare {
         background-color: var(--soft-orange);
         background-image: url('../images/icon-self-care.svg');
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .dashboard {
+    grid-template-columns: 1fr 2fr;
+
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 0.5fr;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard {
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+
+    .sidebar {
+      height: auto;
+
+      .title {
+        display: flex;
+        align-items: center;
+
+        &__text {
+          margin: 0 0 0 16px;
+
+          h1 {
+            font-size: 22px;
+          }
+        }
+      }
+
+      .filters {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        a:not(:first-child) {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+
+      .card {
+        height: 180px;
+
+        &__content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          h1,
+          p {
+            margin-top: 16px;
+          }
+        }
       }
     }
   }
