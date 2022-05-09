@@ -34,7 +34,8 @@ button {
   font-size: 16px;
   font-weight: 300;
   
-  &:hover {
+  &:hover,
+  &.btn-active {
     filter: brightness(0) invert(1);
     cursor: pointer;
   }
@@ -129,6 +130,7 @@ p {
       flex-direction: column;
       align-items: stretch;
       height: 216px;
+      background-color: var(--pale-blue);
 
       position: relative;
 
@@ -188,7 +190,7 @@ p {
         background-image: url('../images/icon-social.svg');
       }
 
-      &--selfcare {
+      &--self-care {
         background-color: var(--soft-orange);
         background-image: url('../images/icon-self-care.svg');
       }
@@ -262,3 +264,6 @@ p {
     }
   }
 }
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

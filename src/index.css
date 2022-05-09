@@ -31,7 +31,7 @@ button {
   font-weight: 300;
 }
 
-button:hover {
+button:hover, button.btn-active {
   -webkit-filter: brightness(0) invert(1);
           filter: brightness(0) invert(1);
   cursor: pointer;
@@ -144,6 +144,7 @@ p {
       -ms-flex-align: stretch;
           align-items: stretch;
   height: 216px;
+  background-color: var(--pale-blue);
   position: relative;
 }
 
@@ -203,7 +204,7 @@ p {
   background-image: url("../images/icon-social.svg");
 }
 
-.dashboard .cards .card--selfcare {
+.dashboard .cards .card--self-care {
   background-color: var(--soft-orange);
   background-image: url("../images/icon-self-care.svg");
 }
@@ -293,5 +294,14 @@ p {
   .dashboard .cards .card__content p {
     margin-top: 16px;
   }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
 }
 /*# sourceMappingURL=index.css.map */
