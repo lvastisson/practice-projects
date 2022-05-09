@@ -27,6 +27,10 @@ a {
   color: var(--desaturated-blue);
 }
 
+a:hover {
+  color: #fff;
+}
+
 html,
 h1,
 h2,
@@ -40,8 +44,18 @@ p {
   font-weight: 300;
 }
 
+h1 {
+  font-size: 42px;
+}
+
 h2 {
   font-weight: 400;
+  font-size: 18px;
+}
+
+p {
+  font-size: 16px;
+  color: var(--pale-blue);
 }
 
 .dashboard {
@@ -52,11 +66,12 @@ h2 {
   -ms-grid-rows: 2fr;
       grid-template-rows: 2fr;
   gap: var(--grid-gap);
+  max-width: 1440px;
 }
 
 .dashboard .sidebar {
   background-color: var(--dark-blue);
-  border-radius: var(--border-radius);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
   overflow: hidden;
 }
 
@@ -67,8 +82,14 @@ h2 {
 }
 
 .dashboard .sidebar .title img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px #fff solid;
+}
+
+.dashboard .sidebar .title p {
+  margin: 32px 0 4px 0;
 }
 
 .dashboard .sidebar .filters {
@@ -80,6 +101,10 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.dashboard .sidebar .filters a:not(:first-child) {
+  margin-top: 16px;
 }
 
 .dashboard .cards {
@@ -96,26 +121,48 @@ h2 {
   background-repeat: no-repeat;
   background-position: 90% -5%;
   background-size: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  position: relative;
 }
 
 .dashboard .cards .card__content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-color: var(--dark-blue);
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
   padding: var(--content-padding);
   margin-top: 40px;
 }
 
 .dashboard .cards .card__content h2 {
-  font-size: 18px;
+  position: absolute;
+  top: 20px;
 }
 
 .dashboard .cards .card__content h1 {
-  font-size: 42px;
+  margin-top: 32px;
 }
 
 .dashboard .cards .card__content p {
-  font-size: 16px;
-  color: var(--pale-blue);
+  margin-top: 16px;
+}
+
+.dashboard .cards .card__content a {
+  position: absolute;
+  top: 16px;
+  right: 24px;
 }
 
 .dashboard .cards .card--work {

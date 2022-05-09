@@ -29,6 +29,10 @@ html {
 a {
   text-decoration: none;
   color: var(--desaturated-blue);
+  
+  &:hover {
+    color: #fff;
+  }
 }
 
 html,
@@ -44,8 +48,18 @@ p {
   font-weight: 300;
 }
 
+h1 {
+  font-size: 42px;
+}
+
 h2 {
   font-weight: 400;
+  font-size: 18px;
+}
+
+p {
+  font-size: 16px;
+  color: var(--pale-blue);
 }
 
 .dashboard {
@@ -53,10 +67,11 @@ h2 {
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 2fr;
   gap: var(--grid-gap);
+  max-width: 1440px;
 
   .sidebar {
     background-color: var(--dark-blue);
-    border-radius: var(--border-radius);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
     overflow: hidden;
 
     .title {
@@ -65,8 +80,14 @@ h2 {
       border-radius: var(--border-radius);
 
       img {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 2px #fff solid;
+      }
+
+      p {
+        margin: 32px 0 4px 0;
       }
     }
 
@@ -74,6 +95,10 @@ h2 {
       padding: var(--content-padding);
       display: flex;
       flex-direction: column;
+
+      a:not(:first-child) {
+        margin-top: 16px;
+      }
     }
   }
 
@@ -88,24 +113,40 @@ h2 {
       background-repeat: no-repeat;
       background-position: 90% -5%;
       background-size: 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+
+      position: relative;
 
       &__content {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
         background-color: var(--dark-blue);
-        border-radius: var(--border-radius);
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
         padding: var(--content-padding);
         margin-top: 40px;
 
         h2 {
-          font-size: 18px;
+          position: absolute;
+          top: 20px;
         }
 
         h1 {
-          font-size: 42px;
+          margin-top: 32px;
         }
 
         p {
-          font-size: 16px;
-          color: var(--pale-blue);
+          margin-top: 16px;
+        }
+
+        a {
+          position: absolute;
+          top: 16px;
+          right: 24px;
         }
       }
 
