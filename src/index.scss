@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+  --blue: hsl(246, 80%, 60%);
+
+  --light-red: hsl(15, 100%, 70%);
+  --soft-blue: hsl(195, 74%, 62%);
+  --pink: hsl(348, 100%, 68%);
+  --lime-green: hsl(145, 58%, 55%);
+  --violet: hsl(264, 64%, 52%);
+  --soft-orange: hsl(43, 84%, 65%);
+
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+
+  --border-radius: 16px;
+  --content-padding: 32px;
+  --grid-gap: 24px;
+}
+
+html {
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--very-dark-blue);
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: var(--desaturated-blue);
+}
+
+html,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+p {
+  font-weight: 300;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 2fr;
+  gap: var(--grid-gap);
+
+  .sidebar {
+    background-color: var(--dark-blue);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+
+    .title {
+      background-color: var(--blue);
+      padding: var(--content-padding);
+      border-radius: var(--border-radius);
+
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    .filters {
+      padding: var(--content-padding);
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--grid-gap);
+
+    .card {
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-position: 90% -5%;
+      background-size: 64px;
+
+      &__content {
+        background-color: var(--dark-blue);
+        border-radius: var(--border-radius);
+        padding: var(--content-padding);
+        margin-top: 40px;
+
+        h2 {
+          font-size: 18px;
+        }
+
+        h1 {
+          font-size: 42px;
+        }
+
+        p {
+          font-size: 16px;
+          color: var(--pale-blue);
+        }
+      }
+
+      &--work {
+        background-color: var(--light-red);
+        background-image: url('../images/icon-work.svg');
+      }
+
+      &--play {
+        background-color: var(--soft-blue);
+        background-image: url('../images/icon-play.svg');
+      }
+
+      &--study {
+        background-color: var(--pink);
+        background-image: url('../images/icon-study.svg');
+      }
+
+      &--exercise {
+        background-color: var(--lime-green);
+        background-image: url('../images/icon-exercise.svg');
+      }
+
+      &--social {
+        background-color: var(--violet);
+        background-image: url('../images/icon-social.svg');
+      }
+
+      &--selfcare {
+        background-color: var(--soft-orange);
+        background-image: url('../images/icon-self-care.svg');
+      }
+    }
+  }
+}
