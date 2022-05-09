@@ -78,14 +78,14 @@ p {
 
   .sidebar {
     background-color: var(--dark-blue);
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    border-radius: var(--border-radius);
     overflow: hidden;
     height: 456px;
 
     .title {
       background-color: var(--blue);
       padding: var(--content-padding);
-      border-radius: var(--border-radius);
+      border-radius: 0 0 var(--border-radius) var(--border-radius);
 
       &__text {
         margin-top: 32px;

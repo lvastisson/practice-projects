@@ -77,7 +77,7 @@ p {
 
 .dashboard .sidebar {
   background-color: var(--dark-blue);
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  border-radius: var(--border-radius);
   overflow: hidden;
   height: 456px;
 }
@@ -85,7 +85,7 @@ p {
 .dashboard .sidebar .title {
   background-color: var(--blue);
   padding: var(--content-padding);
-  border-radius: var(--border-radius);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
 .dashboard .sidebar .title__text {
