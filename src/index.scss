@@ -26,19 +26,25 @@ html {
   color: #fff;
 }
 
-a {
+button {
   text-decoration: none;
+  background: none;
+  border: none;
   color: var(--desaturated-blue);
+  font-size: 16px;
+  font-weight: 300;
   
   &:hover {
-    color: #fff;
+    filter: brightness(0) invert(1);
+    cursor: pointer;
   }
 }
 
 html,
 h1,
 h2,
-p {
+p,
+ul {
   margin: 0;
   padding: 0;
 }
@@ -100,8 +106,9 @@ p {
       padding: var(--content-padding);
       display: flex;
       flex-direction: column;
+      list-style: none;
 
-      a:not(:first-child) {
+      li:not(:first-child) {
         margin-top: 16px;
       }
     }
@@ -149,7 +156,7 @@ p {
           margin-top: 16px;
         }
 
-        a {
+        button {
           position: absolute;
           top: 16px;
           right: 24px;
@@ -228,7 +235,7 @@ p {
         justify-content: space-between;
         align-items: center;
 
-        a:not(:first-child) {
+        li:not(:first-child) {
           margin-top: 0;
         }
       }

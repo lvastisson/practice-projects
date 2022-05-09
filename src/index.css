@@ -22,19 +22,26 @@ html {
   color: #fff;
 }
 
-a {
+button {
   text-decoration: none;
+  background: none;
+  border: none;
   color: var(--desaturated-blue);
+  font-size: 16px;
+  font-weight: 300;
 }
 
-a:hover {
-  color: #fff;
+button:hover {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+  cursor: pointer;
 }
 
 html,
 h1,
 h2,
-p {
+p,
+ul {
   margin: 0;
   padding: 0;
 }
@@ -105,9 +112,10 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  list-style: none;
 }
 
-.dashboard .sidebar .filters a:not(:first-child) {
+.dashboard .sidebar .filters li:not(:first-child) {
   margin-top: 16px;
 }
 
@@ -164,7 +172,7 @@ p {
   margin-top: 16px;
 }
 
-.dashboard .cards .card__content a {
+.dashboard .cards .card__content button {
   position: absolute;
   top: 16px;
   right: 24px;
@@ -255,7 +263,7 @@ p {
         -ms-flex-align: center;
             align-items: center;
   }
-  .dashboard .sidebar .filters a:not(:first-child) {
+  .dashboard .sidebar .filters li:not(:first-child) {
     margin-top: 0;
   }
   .dashboard .cards {
