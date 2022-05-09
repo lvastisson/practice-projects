@@ -18,8 +18,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [https://lvastisson.github.io/time-tracking-dashboard-main/](https://lvastisson.github.io/time-tracking-dashboard-main/)
+- Solution URL: [frontendmentor.io](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw/hub/responsive-dashboard-using-css-grid-HymtFYLU9)
+- Live Site URL: [https://lvastisson.github.io/time-tracking-dashboard-main/src/index.html](https://lvastisson.github.io/time-tracking-dashboard-main/src/index.html)
 
 ## My process
 
