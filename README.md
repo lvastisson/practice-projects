@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [frontendmentor.io](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db/hub/advice-generator-using-javascript-and-api-rJIzxoD89)
+- Live Site URL: [lvastisson.github.io/advice-generator-app-main/src/index.html](https://lvastisson.github.io/advice-generator-app-main/src/index.html)
 
 ### Built with
 
