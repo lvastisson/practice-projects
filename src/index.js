@@ -21,20 +21,24 @@ class AdviceGenerator {
   }
 
   async getAdvice() {
-    this.adviceBtnElem.classList.add('btn--animation');
-    
-    if (!this.btnAnimation) {
-      this.btnAnimation = setTimeout(() => {
-        this.adviceBtnElem.classList.remove('btn--animation');
-        this.btnAnimation = null;
-      }, 1000);
-    }
-
     const response = await fetch(this.apiURL);
     const data = await response.json();
+
+    this.adviceBtnElem.classList.add('btn--animation');
+    this.adviceBtnElem.parentElement.classList.add('advice--slide');
     
-    this.adviceIdElem.innerText = `ADVICE #${data.slip.id}`;
-    this.adviceTextElem.innerText = data.slip.advice;
+    if (!this.animation) {
+      this.animation = setTimeout(() => {
+        this.adviceBtnElem.classList.remove('btn--animation');
+        this.adviceBtnElem.parentElement.classList.remove('advice--slide');
+        this.animation = null;
+      }, 1200);
+
+      setTimeout(() => {
+        this.adviceIdElem.innerText = `ADVICE #${data.slip.id}`;
+        this.adviceTextElem.innerText = data.slip.advice;
+      }, 600);
+    }
   }
 }
 
