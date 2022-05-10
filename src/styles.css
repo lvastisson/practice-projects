@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+:root {
+  --very-dark-desaturated-blue-bg: hsl(222, 26%, 31%);
+  --very-dark-desaturated-blue-keyboard-bg: hsl(223, 31%, 20%);
+  --very-dark-desaturated-blue-screen-bg: hsl(224, 36%, 15%);
+  --desaturated-dark-blue: hsl(225, 21%, 49%);
+  --desaturated-dark-blue-shadow: hsl(224, 28%, 35%);
+  --red: hsl(6, 63%, 50%);
+  --dark-red-shadow: hsl(6, 70%, 34%);
+  --light-grayish-orange: hsl(30, 25%, 89%);
+  --grayish-orange-shadow: hsl(28, 16%, 65%);
+  --very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --white: rgb(255, 255, 255);
+}
+
+.attribution {
+  margin-top: 1rem;
+  color: #fff;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #859dff;
+}
+
+body {
+  margin: 0;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 32px;
+  background-color: var(--very-dark-desaturated-blue-bg);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--white);
+  margin: 0;
+}
+
+main {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.calculator .label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calculator .label h1 {
+  font-size: 1.6rem;
+}
+
+.calculator .label .theme-toggle {
+  font-size: 0.8rem;
+}
+
+.calculator .screen {
+  margin-top: 1rem;
+  background-color: var(--very-dark-desaturated-blue-screen-bg);
+  border-radius: 8px;
+  text-align: right;
+  padding: 1.6rem;
+}
+
+.calculator .numpad {
+  margin-top: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (5rem)[4];
+      grid-template-columns: repeat(4, 5rem);
+  -ms-grid-rows: (3rem)[5];
+      grid-template-rows: repeat(5, 3rem);
+  gap: 1.2rem;
+  padding: 1.2rem;
+  background-color: var(--very-dark-desaturated-blue-keyboard-bg);
+  border-radius: 8px;
+}
+
+.calculator .numpad .btn {
+  border-style: none;
+  border-radius: 8px;
+  background-color: var(--light-grayish-orange);
+  -webkit-box-shadow: 0 4px var(--grayish-orange-shadow);
+          box-shadow: 0 4px var(--grayish-orange-shadow);
+  color: var(--very-dark-grayish-blue);
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.calculator .numpad .btn:hover {
+  cursor: pointer;
+}
+
+.calculator .numpad .btn:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  -webkit-box-shadow: 0 2px var(--grayish-orange-shadow);
+          box-shadow: 0 2px var(--grayish-orange-shadow);
+}
+
+.calculator .numpad .btn--del, .calculator .numpad .btn--equal {
+  color: var(--white);
+  font-size: 0.5em;
+}
+
+.calculator .numpad .btn--del {
+  background-color: var(--desaturated-dark-blue);
+  -webkit-box-shadow: 0 4px var(--desaturated-dark-blue-shadow);
+          box-shadow: 0 4px var(--desaturated-dark-blue-shadow);
+}
+
+.calculator .numpad .btn--del:active {
+  -webkit-box-shadow: 0 2px var(--desaturated-dark-blue-shadow);
+          box-shadow: 0 2px var(--desaturated-dark-blue-shadow);
+}
+
+.calculator .numpad .btn--equal {
+  background-color: var(--red);
+  -webkit-box-shadow: 0 4px var(--dark-red-shadow);
+          box-shadow: 0 4px var(--dark-red-shadow);
+}
+
+.calculator .numpad .btn--equal:active {
+  -webkit-box-shadow: 0 2px var(--dark-red-shadow);
+          box-shadow: 0 2px var(--dark-red-shadow);
+}
+
+.calculator .numpad #reset-btn {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 5 / 1 / 6 / 3;
+}
+
+.calculator .numpad #equal-btn {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: 5 / 3 / 6 / 5;
+}
+/*# sourceMappingURL=styles.css.map */
