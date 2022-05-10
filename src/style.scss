@@ -22,6 +22,9 @@ body {
   margin: 0;
   background-color: var(--dark-blue);
   font-family: Manrope;
+}
+
+main {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,8 +32,7 @@ body {
   align-items: center;
 }
 
-h1,
-h2 {
+h1 {
   margin: 0;
 }
 
@@ -48,7 +50,7 @@ h2 {
   text-align: center;
 
   &--slide {
-    h2 {
+    h1 {
       animation: slide2 1s 0.2s ease-out forwards;
     }
 
@@ -57,7 +59,7 @@ h2 {
     }
   }
 
-  h2 {
+  h1 {
     color: var(--neon-green);
     font-size: 12px;
     letter-spacing: 0.4em;
