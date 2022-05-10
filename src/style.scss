@@ -37,7 +37,7 @@ h2 {
 .advice {
   background-color: var(--dark-grayish-blue);
   border-radius: 16px;
-  padding: 2em 2em 3.6em 2em;
+  padding: 2.4em 2em 3.6em 2em;
   margin: 1rem;
   max-width: 24em;
   display: flex;
@@ -93,9 +93,22 @@ h2 {
       box-shadow: 0 0 30px var(--neon-green);
     }
 
+    &--animation {
+      animation: dice 1s ease-in-out forwards;
+    }
+
     img {
       width: 20px;
     }
   }
 }
 
+@keyframes dice {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

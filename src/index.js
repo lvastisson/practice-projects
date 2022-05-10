@@ -6,14 +6,14 @@ class AdviceGenerator {
   initialize() {
     this.adviceIdElem = document.getElementById('advice-id');
     this.adviceTextElem = document.getElementById('advice-text');
-
+    this.adviceBtnElem = document.getElementById('advice-btn');
     // this.getAdvice();
 
     this.bindEvents();
   }
 
   bindEvents() {
-    document.getElementById('advice-btn').addEventListener('click', (e) => {
+    this.adviceBtnElem.addEventListener('click', (e) => {
       e.preventDefault();
 
       this.getAdvice();
@@ -21,6 +21,15 @@ class AdviceGenerator {
   }
 
   async getAdvice() {
+    this.adviceBtnElem.classList.add('btn--animation');
+    
+    if (!this.btnAnimation) {
+      this.btnAnimation = setTimeout(() => {
+        this.adviceBtnElem.classList.remove('btn--animation');
+        this.btnAnimation = null;
+      }, 1000);
+    }
+
     const response = await fetch(this.apiURL);
     const data = await response.json();
     
