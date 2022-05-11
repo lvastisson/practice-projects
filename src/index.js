@@ -4,6 +4,7 @@ $(document).ready(function() {
   let currentText = '';
   let currentOperation = '';
   let lastOperation = '';
+  let equalPressed = false;
   let lastValue = 0;
   let totalValue = 0;
 
@@ -14,14 +15,17 @@ $(document).ready(function() {
     'multiply': 'x'
   }
 
-  $('[data-number]').click(function() { 
+  $('[data-number]').click(function() {
+    if (equalPressed) {
+      resetVariables();
+    }
     if (currentOperation === '') {
       currentText += this.getAttribute('data-number');
-      lastValue = parseInt(currentText);
+      lastValue = parseFloat(currentText);
     }
     else {
       currentText = this.getAttribute('data-number');
-      lastValue = parseInt(currentText);
+      lastValue = parseFloat(currentText);
       currentOperation = '';
     }
 
@@ -40,15 +44,18 @@ $(document).ready(function() {
         runOperation();
         currentOperation = '';
         currentText = totalValue.toString();
+        equalPressed = true;
         break;
 
       case 'delete':
-        currentOperation = '';
-        lastOperation = '';
+        if (equalPressed) {
+          resetVariables();
+          break;
+        }
         if (currentText.length > 0) {
           currentText = currentText.slice(0, -1);
         }
-        lastValue = parseInt(currentText);
+        lastValue = parseFloat(currentText);
         if (!lastValue) {
           lastValue = 0;
         }
@@ -56,32 +63,21 @@ $(document).ready(function() {
         break;
 
       case 'reset':
-        currentText = '';
-        currentOperation = '';
-        lastOperation = '';
-        lastValue = 0;
-        totalValue = 0;
+        resetVariables();
         break;
 
       case 'comma':
-        // todo
+        if (!currentText.includes('.')) {
+          currentText += '.';
+          lastValue = parseFloat(currentText);
+        }
         break;
 
       default:
-        if (lastOperation === '') {
-          currentOperation = actionVal;
-          lastOperation = currentOperation;
-          if (totalValue === 0) {
-            totalValue = lastValue;
-          }
-          else {
-            lastValue = parseInt(currentText);
-            runOperation();
-          }
-        }
-        else if (currentOperation !== '') {
+        if (!equalPressed) {
           runOperation();
         }
+        equalPressed = false;
         currentOperation = actionVal;
         lastOperation = currentOperation;
         break;
@@ -91,25 +87,34 @@ $(document).ready(function() {
     renderValue();
   });
 
+  function resetVariables() {
+    currentText = '';
+    currentOperation = '';
+    lastOperation = '';
+    lastValue = 0;
+    totalValue = 0;
+    equalPressed = false;
+  }
+  
   function runOperation() {
     switch (lastOperation) {
       case 'add':
-        totalValue += parseInt(lastValue);
+        totalValue += parseFloat(lastValue);
         break;
 
       case 'subtract':
-        totalValue -= parseInt(lastValue);
+        totalValue -= parseFloat(lastValue);
         break;
 
       case 'multiply':
-        totalValue *= parseInt(lastValue);
+        totalValue *= parseFloat(lastValue);
         break;
         
       case 'divide':
-        totalValue /= parseInt(lastValue);
+        totalValue /= parseFloat(lastValue);
         break;
       default:
-        totalValue = parseInt(lastValue);
+        totalValue = parseFloat(lastValue);
         break;
     }
 
