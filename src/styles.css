@@ -11,11 +11,13 @@
   --grayish-orange-shadow: hsl(28, 16%, 65%);
   --very-dark-grayish-blue: hsl(221, 14%, 31%);
   --white: rgb(255, 255, 255);
+  --equal-btn: var(--white);
+  --screen-white: rgb(255, 255, 255);
 }
 
 .attribution {
   margin-top: 1rem;
-  color: #fff;
+  color: var(--screen-white);
   font-size: 11px;
   text-align: center;
 }
@@ -34,7 +36,7 @@ body {
 h1,
 h2,
 h3 {
-  color: var(--white);
+  color: var(--screen-white);
   margin: 0;
 }
 
@@ -95,6 +97,13 @@ main {
   padding: 1.2rem;
   background-color: var(--very-dark-desaturated-blue-keyboard-bg);
   border-radius: 8px;
+}
+
+@media screen and (max-width: 480px) {
+  .calculator .numpad {
+    -ms-grid-columns: (3rem)[4];
+        grid-template-columns: repeat(4, 3rem);
+  }
 }
 
 .calculator .numpad .btn {
@@ -160,5 +169,37 @@ main {
   -ms-grid-column: 3;
   -ms-grid-column-span: 2;
   grid-area: 5 / 3 / 6 / 5;
+  color: var(--equal-btn);
+}
+
+body.theme2 {
+  --very-dark-desaturated-blue-bg: hsl(0, 0%, 90%);
+  --very-dark-desaturated-blue-keyboard-bg: hsl(0, 5%, 81%);
+  --very-dark-desaturated-blue-screen-bg: hsl(0, 0%, 93%);
+  --desaturated-dark-blue: hsl(185, 42%, 37%);
+  --desaturated-dark-blue-shadow: hsl(185, 58%, 25%);
+  --red: hsl(25, 98%, 40%);
+  --dark-red-shadow: hsl(25, 99%, 27%);
+  --light-grayish-orange: hsl(45, 7%, 89%);
+  --grayish-orange-shadow: hsl(35, 11%, 61%);
+  --very-dark-grayish-blue: hsl(60, 10%, 19%);
+  --white: rgb(255, 255, 255);
+  --screen-white: rgb(0, 0, 0);
+}
+
+body.theme3 {
+  --very-dark-desaturated-blue-bg: hsl(268, 75%, 9%);
+  --very-dark-desaturated-blue-keyboard-bg: hsl(268, 71%, 12%);
+  --very-dark-desaturated-blue-screen-bg: hsl(268, 71%, 12%);
+  --desaturated-dark-blue: hsl(281, 89%, 26%);
+  --desaturated-dark-blue-shadow: hsl(285, 91%, 52%);
+  --red: hsl(176, 100%, 44%);
+  --dark-red-shadow: hsl(177, 92%, 70%);
+  --light-grayish-orange: hsl(268, 47%, 21%);
+  --grayish-orange-shadow: hsl(290, 70%, 36%);
+  --very-dark-grayish-blue: hsl(52, 100%, 62%);
+  --white: rgb(255, 255, 255);
+  --screen-white: hsl(52, 100%, 62%);
+  --equal-btn: hsl(198, 20%, 13%);
 }
 /*# sourceMappingURL=styles.css.map */

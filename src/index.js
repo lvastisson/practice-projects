@@ -1,5 +1,6 @@
 $(document).ready(function() {
   const screenElem = $('#screen-text');
+  const bodyElem = $(document.body);
 
   let currentText = '';
   let currentOperation = '';
@@ -8,12 +9,33 @@ $(document).ready(function() {
   let lastValue = 0;
   let totalValue = 0;
 
+  let themeId = 0;
+
   const operationMapper = {
     'add': '+',
     'subtract': '-',
     'divide': '/',
     'multiply': 'x'
   }
+
+  $('.theme-toggle').click(function() {
+    bodyElem.removeClass('theme2 theme3');
+
+    themeId++;
+
+    if (themeId > 2) {
+      themeId = 0;
+    }
+
+    switch (themeId) {
+      case 1:
+        bodyElem.addClass('theme2');
+        break;
+      case 2:
+        bodyElem.addClass('theme3');
+        break;
+    }
+  });
 
   $('[data-number]').click(function() {
     if (equalPressed) {
