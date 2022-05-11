@@ -15,6 +15,13 @@
   --screen-white: rgb(255, 255, 255);
 }
 
+* {
+  -webkit-transition: color 0.25s ease-out;
+  transition: color 0.25s ease-out;
+  -webkit-transition: background-color 0.25s ease-out;
+  transition: background-color 0.25s ease-out;
+}
+
 .attribution {
   margin-top: 1rem;
   color: var(--screen-white);
@@ -148,6 +155,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .calculator .label .theme-toggle .toggle-slider .toggle-slider__dot {
@@ -210,6 +218,11 @@ main {
           transform: translateY(2px);
   -webkit-box-shadow: 0 2px var(--grayish-orange-shadow);
           box-shadow: 0 2px var(--grayish-orange-shadow);
+}
+
+.calculator .numpad .btn:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
 }
 
 .calculator .numpad .btn--del, .calculator .numpad .btn--equal {

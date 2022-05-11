@@ -18,7 +18,7 @@ $(document).ready(function() {
     'multiply': 'x'
   }
 
-  $('.theme-toggle').click(function() {
+  $('.toggle-slider').click(function() {
     bodyElem.removeClass('theme1 theme2 theme3');
 
     themeId++;
