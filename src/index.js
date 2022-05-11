@@ -19,7 +19,7 @@ $(document).ready(function() {
   }
 
   $('.theme-toggle').click(function() {
-    bodyElem.removeClass('theme2 theme3');
+    bodyElem.removeClass('theme1 theme2 theme3');
 
     themeId++;
 
@@ -28,6 +28,9 @@ $(document).ready(function() {
     }
 
     switch (themeId) {
+      case 0:
+        bodyElem.addClass('theme1');
+        break;
       case 1:
         bodyElem.addClass('theme2');
         break;
