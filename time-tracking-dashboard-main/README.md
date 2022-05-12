@@ -19,7 +19,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [frontendmentor.io](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw/hub/responsive-dashboard-using-css-grid-HymtFYLU9)
-- Live Site URL: [https://lvastisson.github.io/time-tracking-dashboard-main/src/index.html](https://lvastisson.github.io/time-tracking-dashboard-main/src/index.html)
+- Live Site URL: [github.io](https://lvastisson.github.io/practice-projects/time-tracking-dashboard-main/src/index.html)
 
 ## My process
 
