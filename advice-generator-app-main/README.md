@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [frontendmentor.io](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db/hub/advice-generator-using-javascript-and-api-rJIzxoD89)
-- Live Site URL: [lvastisson.github.io/advice-generator-app-main/src/index.html](https://lvastisson.github.io/advice-generator-app-main/src/index.html)
+- Live Site URL: [lvastisson.github.io](https://lvastisson.github.io/practice-projects/advice-generator-app-main/src/index.html)
 
 ### Built with
 
