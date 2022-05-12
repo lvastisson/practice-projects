@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time tracking dashboard</title>
+  <link rel="shortcut icon" href="../images/favicon-32x32.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="dashboard">
+    <div class="sidebar">
+      <div class="title">
+        <img src="../images/image-jeremy.png" alt="Jeremy">
+        <div class="title__text">
+          <p>Report for</p>
+          <h1>Jeremy Robson</h1>
+        </div>
+      </div>
+      <ul class="filters">
+        <li>
+          <button data-filter="daily">Daily</button>
+        </li>
+        <li>
+          <button data-filter="weekly" class="btn-active">Weekly</button>
+        </li>
+        <li>
+          <button data-filter="monthly">Monthly</button>
+        </li>
+      </ul>
+    </div>
+    <div id="cards-display" class="cards">
+      <!-- cards get dynamically loaded here -->
+      <!-- card layout:
+      <div class="card card--work">
+        <div class="card__content">
+          <h2>Work</h2>
+          <h1>32hrs</h1>
+          <p>Last week- 36hrs</p>
+          <button>
+            <img src="../images/icon-ellipsis.svg" width="16" alt="options">
+          </button>
+        </div>
+      </div>
+      -->
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/lvastisson">Lauri</a>.
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
