@@ -31,7 +31,9 @@ function closeMenu() {
 }
 
 subMenuBtns.forEach((menuBtn, i) => {
-	menuBtn.addEventListener('click', () => {
+	menuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+
     if (openSubMenu === null) {
       menuBtn.parentNode.classList.add('open');
       openSubMenu = menuBtn;
@@ -46,4 +48,11 @@ subMenuBtns.forEach((menuBtn, i) => {
       openSubMenu = menuBtn;
     }
 	});
+});
+
+window.addEventListener('click', () => {
+  if (openSubMenu !== null) {
+    openSubMenu.parentNode.classList.remove('open');
+    openSubMenu = null;
+  }
 });

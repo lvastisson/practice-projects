@@ -263,6 +263,7 @@ p {
 
       &.open {
         transform: translateX(0);
+        overflow-y: auto;
       }
 
       .btn {
@@ -287,6 +288,12 @@ p {
           .btn {
             width: 100%;
           }
+        }
+
+        li .sub-nav-list {
+          position: relative;
+          background: none;
+          box-shadow: none;
         }
       }
     }
