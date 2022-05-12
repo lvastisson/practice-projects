@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [frontendmentor.io](https://www.frontendmentor.io/solutions/intro-section-with-dropdown-navigation-ByMUYP5U5)
+- Live Site URL: [github.io](https://lvastisson.github.io/intro-section-with-dropdown-navigation-main/src/index.html)
 
 ### Built with
 
