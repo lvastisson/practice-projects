@@ -18,7 +18,14 @@ $(document).ready(function() {
     'multiply': 'x'
   }
 
-  $('.toggle-slider').click(function() {
+  $('.toggle-slider').click(toggleTheme);
+  $('.toggle-slider').keyup(function(e){
+    if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+      toggleTheme();
+    }
+  });
+
+  function toggleTheme() {
     bodyElem.removeClass('theme1 theme2 theme3');
 
     themeId++;
@@ -38,7 +45,7 @@ $(document).ready(function() {
         bodyElem.addClass('theme3');
         break;
     }
-  });
+  }
 
   $('[data-number]').click(function() {
     if (equalPressed) {
