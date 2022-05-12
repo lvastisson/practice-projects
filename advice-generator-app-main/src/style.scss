@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap'); 
+
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 8px;
+  font-size: 11px;
+  text-align: center;
+  color: #fff;
+  a { color: hsl(228, 69%, 69%); }
+} 
+
+body {
+  margin: 0;
+  background-color: var(--dark-blue);
+  font-family: Manrope;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+.advice {
+  background-color: var(--dark-grayish-blue);
+  border-radius: 16px;
+  padding: 2.4em 2em 3.6em 2em;
+  margin: 1rem;
+  max-width: 24em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  position: relative;
+  text-align: center;
+
+  &--slide {
+    h1 {
+      animation: slide2 1s 0.2s ease-out forwards;
+    }
+
+    q {
+      animation: slide 1s ease-out forwards;
+    }
+  }
+
+  h1 {
+    color: var(--neon-green);
+    font-size: 12px;
+    letter-spacing: 0.4em;
+  }
+
+  q {
+    color: var(--light-cyan);
+    font-size: 24px;
+  }
+
+  .divider {
+    width: 24em;
+    height: auto;
+    background-image: url('./images/pattern-divider-desktop.svg');
+    background-size:contain;
+    background-repeat: no-repeat;
+
+    img {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 18em;
+      background-image: url('./images/pattern-divider-mobile.svg');
+    }
+  }
+
+  .btn {
+    position: absolute;
+    bottom: -24px;
+    height: 48px;
+    width: 48px;
+    border: none;
+    background-color: var(--neon-green);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0 30px var(--neon-green);
+    }
+
+    &--animation {
+      animation: dice 1s ease-in-out forwards;
+    }
+
+    img {
+      width: 20px;
+    }
+  }
+}
+
+@keyframes dice {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+  40% {
+    transform: translateX(110%);
+    opacity: 0;
+  }
+
+  60% {
+    transform: translateX(-110%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide2 {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+  40% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+
+  60% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
