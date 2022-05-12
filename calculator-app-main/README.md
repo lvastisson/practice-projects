@@ -28,7 +28,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [frontendmentor.io](https://www.frontendmentor.io/solutions/calculator-with-multible-themes-using-jquery-sass-css-grid-HkFaiQKLc)
-- Live Site URL: [github.io](https://lvastisson.github.io/calculator-app-main/src/index.html)
+- Live Site URL: [github.io](https://lvastisson.github.io/practice-projects/calculator-app-main/src/index.html)
 
 ### Built with
 
