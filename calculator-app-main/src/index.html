@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme1">
+  <main>
+    <div class="calculator" id="calculator">
+      <div class="label">
+        <h1>calc</h1>
+        <div class="theme-toggle">
+          <h3 class="grid-item">THEME</h3>
+          <h4 class="grid-item">1</h4>
+          <h4 class="grid-item">2</h4>
+          <h4 class="grid-item">3</h4>
+          <div class="grid-item toggle-slider" tabindex="0">
+            <div class="toggle-slider__dot"></div>
+          </div>
+        </div>
+      </div>
+      <div class="screen">
+        <h2 id="screen-text">0</h2>
+      </div>
+      <div class="numpad">
+        <button class="btn" data-number="7">7</button>
+        <button class="btn" data-number="8">8</button>
+        <button class="btn" data-number="9">9</button>
+        <button class="btn btn--del" data-action="delete">DEL</button>
+        <button class="btn" data-number="4">4</button>
+        <button class="btn" data-number="5">5</button>
+        <button class="btn" data-number="6">6</button>
+        <button class="btn" data-action="add">+</button>
+        <button class="btn" data-number="1">1</button>
+        <button class="btn" data-number="2">2</button>
+        <button class="btn" data-number="3">3</button>
+        <button class="btn" data-action="subtract">-</button>
+        <button class="btn" data-action="comma">.</button>
+        <button class="btn" data-number="0">0</button>
+        <button class="btn" data-action="divide">/</button>
+        <button class="btn" data-action="multiply">x</button>
+        <button class="btn btn--del" id="reset-btn" data-action="reset">RESET</button>
+        <button class="btn btn--equal" id="equal-btn" data-action="equals">=</button>
+      </div>
+    </div>
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/lvastisson">Lauri</a>.
+    </footer>
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
