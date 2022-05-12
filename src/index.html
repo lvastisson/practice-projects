@@ -11,29 +11,65 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <nav id="navbar">
     <img class="nav-logo" src="./images/logo.svg" alt="Snap logo">
-    <ul class="nav-list nav-list--left">
-      <li>Features</li>
-      <li>Company</li>
-      <li>Careers</li>
-      <li>About</li>
-    </ul>
-    <ul class="nav-list nav-list--right">
-      <li>Login</li>
-      <li>Register</li>
-    </ul>
+    <button class="btn btn-menu" id="menu-open"><img src="./images/icon-menu.svg" alt="menu"></button>
+    <div class="navbar-items" id="menu">
+      <button class="btn btn-close" id="menu-close"><img src="./images/icon-close-menu.svg" alt="menu"></button>
+      <ul class="nav-list nav-list--left">
+        <li>
+          <button class="btn btn--dropdown">Features <img src="./images/icon-arrow-down.svg" alt=""></button>
+          <ul class="sub-nav-list">
+            <li><img src="./images/icon-todo.svg" alt="">Todo List</li>
+            <li><img src="./images/icon-calendar.svg" alt="">Calendar</li>
+            <li><img src="./images/icon-reminders.svg" alt="">Reminders</li>
+            <li><img src="./images/icon-planning.svg" alt="">Planning</li>
+          </ul>
+        </li>
+        <li>
+          <button class="btn btn--dropdown">Company <img src="./images/icon-arrow-down.svg" alt=""></button>
+          <ul class="sub-nav-list">
+            <li>History</li>
+            <li>Our Team</li>
+            <li>Blog</li>
+          </ul>
+        </li>
+        <li>
+          <button class="btn btn">Careers</button>
+        </li>
+        <li>
+          <button class="btn btn">About</button>
+        </li>
+      </ul>
+      <ul class="nav-list nav-list--right">
+        <li>
+          <button class="btn btn">Login</button>
+        </li>
+        <li>
+          <button class="btn btn--register">Register</button>
+        </li>
+      </ul>
+    </div>
   </nav>
 
   <main>
     <section id="hero">
-      <h1>Make remote work</h1>
-      <p>
-        Get your team in sync, no matter your location. Streamline processes, 
-        create team rituals, and watch productivity soar.
-      </p>
-      <button>Learn more</button>
+      <img class="hero-img-mobile" src="./images/image-hero-mobile.png" alt="">
+      <div class="hero-main">
+        <h1>Make remote work</h1>
+        <p>
+          Get your team in sync, no matter your location. Streamline processes, 
+          create team rituals, and watch productivity soar.
+        </p>
+        <button class="btn btn--learn">Learn more</button>
+      </div>
+      <div class="hero-logos">
+        <img src="./images/client-databiz.svg" alt="Databiz logo">
+        <img src="./images/client-audiophile.svg" alt="Audiophile logo">
+        <img src="./images/client-meet.svg" alt="Meet logo">
+        <img src="./images/client-maker.svg" alt="Maker logo">
+      </div>
+      <img class="hero-img-desktop" src="./images/image-hero-desktop.png" alt="">
     </section>
   </main>
   
@@ -41,5 +77,9 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://www.frontendmentor.io/profile/lvastisson">Lauri</a>.
   </footer>
+
+  <div class="fullscreen-bg" id="bg"></div>
+
+  <script src="./index.js"></script>
 </body>
 </html>
