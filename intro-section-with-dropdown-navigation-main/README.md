@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [frontendmentor.io](https://www.frontendmentor.io/solutions/intro-section-with-dropdown-navigation-ByMUYP5U5)
-- Live Site URL: [github.io](https://lvastisson.github.io/intro-section-with-dropdown-navigation-main/src/index.html)
+- Live Site URL: [github.io](https://lvastisson.github.io/practice-projects/intro-section-with-dropdown-navigation-main/src/index.html)
 
 ### Built with
 
