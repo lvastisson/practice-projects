@@ -99,6 +99,10 @@ $(document).ready(function() {
         break;
 
       case 'comma':
+        if (currentOperation !== '') {
+          currentText = '';
+          currentOperation = '';
+        }
         if (!currentText.includes('.')) {
           currentText += '.';
           lastValue = parseFloat(currentText);
