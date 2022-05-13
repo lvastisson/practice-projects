@@ -8,31 +8,78 @@
   <style>
     body {
       margin: 0;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    a {
+      position: relative;
+      text-decoration: none;
+      color: white;
+      display: block;
+      filter: brightness(0.75);
+      transition: filter 0.25s;
+    }
+
+    a div {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 0.5rem;
+    }
+
+    .grid {
+      max-width: 1200px;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      list-style: none;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    img {
+      width: 100%;
+      background-image: --image;
+      background-size: contain;
+    }
+
+    a:hover {
+      filter: none;
     }
   </style>
 </head>
 <body>
-  <h1><a href="https://www.frontendmentor.io/">frontendmentor.io</a> challenges solutions</h1>
-  <ul>
-    <li>
-      <a href="https://lvastisson.github.io/practice-projects/advice-generator-app-main/src/index.html">Advice generator app</a>
-    </li>
-    <li>
-      <a href="https://lvastisson.github.io/practice-projects/calculator-app-main/src/index.html">Calculator app</a>
-    </li>
-    <li>
-      <a href="https://lvastisson.github.io/practice-projects/intro-section-with-dropdown-navigation-main/src/index.html">Intro section with dropdown navigation</a>
-    </li>
-    <li>
-      <a href="https://lvastisson.github.io/practice-projects/time-tracking-dashboard-main/src/index.html">Time tracking dashboard</a>
-    </li>
-  </ul>
-  <iframe src="https://lvastisson.github.io/practice-projects/advice-generator-app-main/src/index.html" title="W3Schools Free Online Web Tutorials" style="width: calc(100vw - 24px); height:100vh;"></iframe>
-
-<iframe src="https://lvastisson.github.io/practice-projects/calculator-app-main/src/index.html" title="W3Schools Free Online Web Tutorials" style="width: calc(100vw - 24px); height:100vh;"></iframe>
-
-<iframe src="https://lvastisson.github.io/practice-projects/intro-section-with-dropdown-navigation-main/src/index.html" title="W3Schools Free Online Web Tutorials" style="width: calc(100vw - 24px); height:100vh;"></iframe>
-
-<iframe src="https://lvastisson.github.io/practice-projects/time-tracking-dashboard-main/src/index.html" title="W3Schools Free Online Web Tutorials" style="width: calc(100vw - 24px); height:100vh;"></iframe>
+  <div class="grid">
+    <divi>
+      <a href="https://lvastisson.github.io/practice-projects/advice-generator-app-main/src/index.html">
+        <img src="./images/advice-generator-app.png" alt="advice generator app" title="advice generator app">
+        <div>advice generator app</div>
+      </a>
+    </divi>
+    <div>
+      <a href="https://lvastisson.github.io/practice-projects/calculator-app-main/src/index.html">
+        <img src="./images/calculator-app.png" alt="calculator app" title="calculator app">
+        <div>calculator app</div>
+      </a>
+    </div>
+    <div>
+      <a href="https://lvastisson.github.io/practice-projects/intro-section-with-dropdown-navigation-main/src/index.html">
+        <img src="./images/intro-section.png" alt="intro section with dropdown menus" title="intro section with dropdown menus">
+        <div>intro section with dropdown menus</div>
+      </a>
+    </div>
+    <div>
+      <a href="https://lvastisson.github.io/practice-projects/time-tracking-dashboard-main/src/index.html">
+        <img src="./images/time-tracking-dashboard.png" alt="time tracking dashboard" title="time tracking dashboard">
+        <div>time tracking dashboard</div>
+      </a>
+    </div>
+  </div>
 </body>
 </html>
